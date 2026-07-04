@@ -41,31 +41,113 @@ class _LoginState extends State<Login> {
                 ],
               ),
             ),
-            Transform.translate(
-              offset: const Offset(0, -50),
-              child: Container(
-                margin: EdgeInsets.only(top: 20),
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(30),
-                    topRight: Radius.circular(30),
+            Expanded(
+              child: SingleChildScrollView(
+                child: Transform.translate(
+                  offset: const Offset(0, -50),
+                  child: Container(
+                    margin: EdgeInsets.only(top: 20),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(30),
+                        topRight: Radius.circular(30),
+                      ),
+                    ),
+                    width: double.infinity,
+                    padding: EdgeInsets.symmetric(vertical: 50, horizontal: 20),
+                    child: Form(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text('Email'),
+                        SizedBox( height: 10,),
+                        TextFormField(
+                          keyboardType: TextInputType.emailAddress,
+                          decoration: InputDecoration(
+                            hintText: 'you@plantify.co',
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(30),
+                              borderSide: BorderSide.none
+                            ),
+                            hintStyle: TextStyle(
+                              color: Colors.grey.shade500
+                            ),
+                            prefixIcon: const Icon(
+                              Icons.email_outlined,
+                              color: Colors.green,
+                            ),
+                            filled: true,
+                            fillColor: const Color(0xFFF3F8F2),
+                          ),
+
+                        ),
+                        SizedBox(height: 20,),
+                        Text('Password'),
+                        SizedBox( height: 10,),
+                        TextFormField(
+                          keyboardType: TextInputType.visiblePassword,
+                          decoration: InputDecoration(
+                            border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(30),
+                                borderSide: BorderSide.none
+                            ),
+                            hintStyle: TextStyle(
+                                color: Colors.grey.shade500
+                            ),
+                            prefixIcon: const Icon(
+                              Icons.lock,
+                              color: Colors.green,
+                            ),
+                            filled: true,
+                            fillColor: const Color(0xFFF3F8F2),
+                          ),
+                        ),
+                        SizedBox(height: 20,),
+                        Row(
+                          children: [
+                            Text('Remember me'),
+                            Spacer(),
+                            Text('Forgot password?', style: TextStyle(color: Color(0xff2E7D32)),)
+                          ],
+                        ),
+                        SizedBox(height: 15,),
+                        SizedBox(width: double.infinity, height: 50,
+                          child: ElevatedButton(onPressed: (){},
+                              child: Text('Sign in', style: TextStyle(color: Colors.white, fontSize: 20),),
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Color(0xff2E7D32)
+                            ),
+                          ),
+                        ),
+                        SizedBox(height: 15,),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text('OR', textAlign: TextAlign.center,)
+                          ],
+                        ),
+                        SizedBox(height: 15,),
+                        SizedBox(width: double.infinity, height: 50,
+                          child: ElevatedButton(onPressed: (){},
+                            child: Text('Continue with google', style: TextStyle(color: Colors.black,  fontSize: 20),),
+                            style: ElevatedButton.styleFrom(
+                                backgroundColor: Color(0xFFF3F8F2)
+                            ),
+                          ),
+                        ),
+                        SizedBox(height: 15,),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text('New here?  ', style: TextStyle(fontSize: 18),),
+                            Text('Create account',style: TextStyle(fontSize: 18, color: Color(0xff2E7D32) ), )
+                          ],
+                        )
+                      ],
+                    )),
                   ),
                 ),
-                width: double.infinity,
-                padding: EdgeInsetsGeometry.symmetric(vertical: 50, horizontal: 20),
-                child: Form(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text('Emailll'),
-                    TextFormField(
-                      decoration: InputDecoration(
-                        hintText: 'you@plantify.co'
-                      ),
-                    )
-                  ],
-                )),
               ),
             )
           ],
