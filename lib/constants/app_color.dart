@@ -10,6 +10,8 @@ class AppColors {
 
   static const Color cardBackground = Color(0xffF4F8F2);
 
+  static const Color surface = Color(0xFFF3F8F2);
+
   static const Color searchBar = Color(0xffF1F6EE);
 
   static const Color textPrimary = Color(0xff111111);

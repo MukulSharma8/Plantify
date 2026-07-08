@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:plantify/widgets/home_header.dart';
+import 'package:plantify/widgets/search_bar_widget.dart';
 
 
 class HomeScreen extends StatefulWidget {
@@ -12,12 +14,17 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          Text('Good morning', style: TextStyle(color: Colors.grey),),
-          Text('Hello, Mukul', style: TextStyle(fontSize: 20),)
-        ],
-      ),
+      body: SafeArea(
+          child: Container(
+            padding: EdgeInsets.symmetric( horizontal: 20),
+            child: Column(
+              children: [
+                HomeHeader(),
+                SizedBox(height: 20,),
+                SearchBarWidget()
+              ],
+            ),
+          ))
     );
   }
 }
