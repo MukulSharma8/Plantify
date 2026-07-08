@@ -3,7 +3,7 @@ class AppAssets {
 
   static const String leafIcon = "assets/images/icons/leaf.png";
 
-  static const String monstera = "assets/images/plants/monstera.png";
+  static const String monstera = "assets/images/plants/monstera.jpg";
 
   static const String snakePlant = "assets/images/plants/snake.png";
 
