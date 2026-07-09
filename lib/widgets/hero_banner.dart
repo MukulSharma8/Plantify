@@ -47,14 +47,16 @@ class HeroBanner extends StatelessWidget {
             ),
           ),
           Positioned(
+
             bottom: 20,
             left: 20,
+            right: 20,
             child: ClipRRect(
               borderRadius: BorderRadius.circular(28),
               child: BackdropFilter(
                 filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
                 child: Container(
-                  width: width*0.8,
+                  width: width,
                   padding: EdgeInsets.all(20),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(30),
