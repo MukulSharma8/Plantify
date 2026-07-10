@@ -5,6 +5,8 @@ class AppAssets {
 
   static const String monstera = "assets/images/plants/monstera.jpg";
 
+  static const String monstera1 = "assets/images/plants/monstera1.jpg";
+
   static const String snakePlant = "assets/images/plants/snake.png";
 
   static const String fiddleLeaf = "assets/images/plants/fiddle.png";
