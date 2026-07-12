@@ -13,7 +13,7 @@ class FeaturedCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
 
-    final cardWidth = size.width * 0.45;
+    final cardWidth = size.width * 0.5;
     final cardHeight = size.height * 0.34;
 
     return Container(
@@ -28,7 +28,7 @@ class FeaturedCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Expanded(
-            flex: 7 ,
+            flex: 12 ,
             child: Stack(
               children: [
                 Center(
@@ -36,7 +36,7 @@ class FeaturedCard extends StatelessWidget {
                     borderRadius: BorderRadius.circular(24),
                     child: Image.asset(
                       plant.image,
-                      fit: BoxFit.contain,
+                      fit: BoxFit.cover,
                     ),
                   ),
                 ),
@@ -87,7 +87,7 @@ class FeaturedCard extends StatelessWidget {
           Row(
             children: [
               Text(
-                plant.price,
+                "\$${plant.price}",
                 style: TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.bold,

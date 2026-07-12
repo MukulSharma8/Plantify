@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:plantify/constants/app_color.dart';
 import 'package:plantify/widgets/category_card.dart';
 
 class CategorySection extends StatelessWidget {
@@ -8,6 +9,14 @@ class CategorySection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text('Categories', style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),),
+            Text('See all', style: TextStyle(color: AppColors.primary),)
+          ],
+        ),
+        SizedBox(height: 15,),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
