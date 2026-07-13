@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:plantify/screens/auth/login.dart';
-import 'package:plantify/screens/home/home_screen.dart';
+import 'package:plantify/screens/mainScreens/home_screen.dart';
+import 'package:plantify/screens/mainScreens/main_screen.dart';
 
 class Signup extends StatefulWidget {
   const Signup({super.key});
@@ -21,7 +22,7 @@ class _SignupState extends State<Signup> {
                   gradient: LinearGradient(colors: [Color(0xff2E7D32), Color(0xff1B5E20)], begin: AlignmentGeometry.topLeft, end: Alignment.bottomRight)
               ),
               width: double.infinity,
-              padding: EdgeInsets.symmetric(vertical: 30, horizontal: 20),
+              padding: EdgeInsets.only(top: 30, left: 20, right: 20, bottom: 50),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -136,7 +137,7 @@ class _SignupState extends State<Signup> {
                             SizedBox(height: 15,),
                             SizedBox(width: double.infinity, height: 50,
                               child: ElevatedButton(onPressed: (){
-                                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomeScreen()));
+                                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => MainScreen()));
                               },
                                 child: Text('Create account', style: TextStyle(color: Colors.white, fontSize: 20),),
                                 style: ElevatedButton.styleFrom(

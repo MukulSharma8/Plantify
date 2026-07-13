@@ -36,10 +36,9 @@ class PopularCard extends StatelessWidget {
           const SizedBox(height: 12),
 
           Text(
-            plant.category,
+            plant.name,
             style: TextStyle(
-              fontSize: 10,
-              color: Colors.grey.shade600,
+              fontSize: 16,
               fontWeight: FontWeight.w600,
               letterSpacing: 1,
             ),
@@ -49,9 +48,10 @@ class PopularCard extends StatelessWidget {
 
           /// Plant Name
           Text(
-            plant.name,
-            style: const TextStyle(
-              fontSize: 16,
+            plant.category,
+            style: TextStyle(
+              fontSize: 12,
+              color: Colors.grey.shade600,
               fontWeight: FontWeight.bold,
             ),
             maxLines: 1,

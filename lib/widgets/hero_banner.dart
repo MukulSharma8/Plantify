@@ -14,7 +14,7 @@ class HeroBanner extends StatelessWidget {
 
     return Container(
       width: width,
-      height: height * 0.53,
+      height: height * 0.45,
       clipBehavior: Clip.hardEdge,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(40),

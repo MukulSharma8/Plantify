@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:plantify/screens/auth/signup.dart';
-import 'package:plantify/screens/home/home_screen.dart';
+import 'package:plantify/screens/mainScreens/home_screen.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
