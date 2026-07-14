@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:plantify/screens/auth/signup.dart';
 import 'package:plantify/screens/mainScreens/home_screen.dart';
+import 'package:plantify/screens/mainScreens/main_screen.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -116,7 +117,7 @@ class _LoginState extends State<Login> {
                         SizedBox(height: 15,),
                         SizedBox(width: double.infinity, height: 50,
                           child: ElevatedButton(onPressed: (){
-                            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Signup()));
+                            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => MainScreen()));
                           },
                               child: Text('Sign in', style: TextStyle(color: Colors.white, fontSize: 20),),
                             style: ElevatedButton.styleFrom(
@@ -145,7 +146,9 @@ class _LoginState extends State<Login> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text('New here?  ', style: TextStyle(fontSize: 18),),
-                            Text('Create account',style: TextStyle(fontSize: 18, color: Color(0xff2E7D32) ), )
+                            InkWell( onTap: (){
+                              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Signup()));
+                            },child: Text('Create account',style: TextStyle(fontSize: 18, color: Color(0xff2E7D32) ), ))
                           ],
                         )
                       ],

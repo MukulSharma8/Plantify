@@ -34,7 +34,7 @@ class FeaturedCard extends StatelessWidget {
                 Center(
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(24),
-                    child: Image.asset(
+                    child: Image.network(
                       plant.image,
                       fit: BoxFit.cover,
                     ),
@@ -75,6 +75,7 @@ class FeaturedCard extends StatelessWidget {
           const SizedBox(height: 4),
           Text(
             plant.name,
+            maxLines: 1,
             style: TextStyle(
               fontSize: 16,
               fontWeight: FontWeight.bold,
@@ -87,7 +88,7 @@ class FeaturedCard extends StatelessWidget {
           Row(
             children: [
               Text(
-                "\$${plant.price}",
+                "\$48",
                 style: TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.bold,

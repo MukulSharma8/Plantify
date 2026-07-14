@@ -35,17 +35,17 @@ class _MainScreenState extends State<MainScreen> {
           pages[selectedIndex],
           Positioned(
             left: 20,
-          bottom: 10,
+          bottom: 20,
           right: 20,
           child: ClipRRect(
             borderRadius: BorderRadius.circular(40),
             child: BackdropFilter(
               filter: ImageFilter.blur(sigmaX: 15, sigmaY: 15 ),
               child: Container(
-                height: 100,
-                padding: EdgeInsets.only(bottom: 40),
+                height: 60,
+                padding: EdgeInsets.only(bottom: 10),
                 decoration: BoxDecoration(
-                  color: Colors.white.withValues(alpha: 0.2),
+                  color: Colors.white.withValues(alpha: 0.1),
                   border: Border.all(
                     color: Colors.white.withValues(alpha: 0.2),
                   ),

@@ -25,7 +25,7 @@ class PopularCard extends StatelessWidget {
             flex: 20,
             child: ClipRRect(
               borderRadius: BorderRadius.circular(18),
-              child: Image.asset(
+              child: Image.network(
                 plant.image,
                 fit: BoxFit.cover,
                 width: double.infinity,
@@ -37,8 +37,9 @@ class PopularCard extends StatelessWidget {
 
           Text(
             plant.name,
+            maxLines: 1,
             style: TextStyle(
-              fontSize: 16,
+              fontSize: 14,
               fontWeight: FontWeight.w600,
               letterSpacing: 1,
             ),
@@ -85,7 +86,7 @@ class PopularCard extends StatelessWidget {
           Row(
             children: [
               Text(
-                "\$${plant.price}",
+                "\$56.00",
                 style: const TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.bold,

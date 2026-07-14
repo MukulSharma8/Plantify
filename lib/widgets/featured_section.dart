@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:plantify/constants/app_color.dart';
-import 'package:plantify/models/plant_data.dart';
+import 'package:plantify/models/plant.dart';
 import 'package:plantify/widgets/featured_card.dart';
 
 class FeaturedSection extends StatelessWidget {
-  const FeaturedSection({super.key});
+  final List<Plant> plants;
+
+  const FeaturedSection({
+    super.key,
+    required this.plants,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -24,11 +29,11 @@ class FeaturedSection extends StatelessWidget {
           scrollDirection: Axis.horizontal,
           child: Row(
             children: List.generate(
-              featuredPlants.length,
+              10,
                   (index) => Padding(
                 padding: const EdgeInsets.only(right: 16),
                 child:FeaturedCard(
-                  plant: featuredPlants[index],
+                  plant: plants[index],
                 ),
               ),
             ),
