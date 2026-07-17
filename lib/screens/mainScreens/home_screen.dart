@@ -37,7 +37,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: CircularProgressIndicator(),
               );
             }
-
             if (snapshot.hasError) {
               return Center(
                 child: Text(snapshot.error.toString()),

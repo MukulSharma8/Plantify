@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:plantify/constants/app_color.dart';
+import 'package:plantify/screens/mainScreens/cart_screen.dart';
+import 'package:plantify/screens/mainScreens/wishlist_screen.dart';
 
 class HomeHeader extends StatelessWidget {
   const HomeHeader({super.key});
@@ -19,22 +21,32 @@ class HomeHeader extends StatelessWidget {
                 ],
               ),
               Spacer(),
-              Container(
-                padding: EdgeInsets.all(10),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(50),
-                  color: AppColors.surface
+              InkWell(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => WishlistScreen()));
+                },
+                child: Container(
+                  padding: EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(50),
+                    color: AppColors.surface
+                  ),
+                  child: Icon(Icons.favorite_border, size: 20,),
                 ),
-                child: Icon(Icons.favorite_border, size: 20,),
               ),
               SizedBox(width: 10,),
-              Container(
-                padding: EdgeInsets.all(10),
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(50),
-                    color: AppColors.primary
+              InkWell(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => CartScreen()));
+                },
+                child: Container(
+                  padding: EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(50),
+                      color: AppColors.primary
+                  ),
+                  child: Icon(Icons.shopping_bag_outlined, size: 20,color: Colors.white,),
                 ),
-                child: Icon(Icons.shopping_bag_outlined, size: 20,color: Colors.white,),
               ),
             ],
           ),
