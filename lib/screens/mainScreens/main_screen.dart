@@ -42,7 +42,7 @@ class _MainScreenState extends State<MainScreen> {
             child: BackdropFilter(
               filter: ImageFilter.blur(sigmaX: 15, sigmaY: 15 ),
               child: Container(
-                height: 60,
+                height: 100,
                 padding: EdgeInsets.only(bottom: 10),
                 decoration: BoxDecoration(
                   color: Colors.white.withValues(alpha: 0.1),
